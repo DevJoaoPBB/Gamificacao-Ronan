@@ -1,0 +1,25 @@
+/* Estilos para a div do quadrado central */
+#quadrado-central {
+    width: 70%; /* Largura do quadrado central (ajuste conforme necessário) */
+    max-width: 400px; /* Largura máxima do quadrado central */
+    margin: 0 auto; /* Centralizar horizontalmente */
+    padding: 20px; /* Espaçamento interno */
+    border: 2px solid #333; /* Borda do quadrado */
+    background-color: #f0f0f0; /* Cor de fundo do quadrado */
+    text-align: left; /* Alinhar o texto à esquerda dentro do quadrado */
+    box-sizing: border-box; /* Inclui a espessura da borda na largura */
+  }
+  
+  /* Estilos para os campos de entrada */
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  input[type="email"],
+  select,
+  input[type="radio"] {
+    width: 100%; /* Defina a largura total para os campos */
+    margin-bottom: 10px; /* Espaçamento inferior entre os campos */
+    padding: 5px; /* Espaçamento interno dos campos */
+    box-sizing: border-box; /* Inclui a espessura da borda na largura */
+  }
+  
