@@ -46,7 +46,7 @@ select {
 .bodyCentro {
   display: flex;
   flex-direction: column;
-  height:auto;
+  height:100vh;
   justify-content: center;
   align-items: center;
   font-family: sans-serif;
