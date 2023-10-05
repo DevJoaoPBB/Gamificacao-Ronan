@@ -1,25 +1,123 @@
-/* Estilos para a div do quadrado central */
-#quadrado-central {
-    width: 70%; /* Largura do quadrado central (ajuste conforme necessário) */
-    max-width: 400px; /* Largura máxima do quadrado central */
-    margin: 0 auto; /* Centralizar horizontalmente */
-    padding: 20px; /* Espaçamento interno */
-    border: 2px solid #333; /* Borda do quadrado */
-    background-color: #f0f0f0; /* Cor de fundo do quadrado */
-    text-align: left; /* Alinhar o texto à esquerda dentro do quadrado */
-    box-sizing: border-box; /* Inclui a espessura da borda na largura */
-  }
-  
-  /* Estilos para os campos de entrada */
-  input[type="text"],
-  input[type="number"],
-  input[type="date"],
-  input[type="email"],
-  select,
-  input[type="radio"] {
-    width: 100%; /* Defina a largura total para os campos */
-    margin-bottom: 10px; /* Espaçamento inferior entre os campos */
-    padding: 5px; /* Espaçamento interno dos campos */
-    box-sizing: border-box; /* Inclui a espessura da borda na largura */
-  }
-  
+*{
+
+  margin: 0px;
+  padding: 0px;
+}
+
+input {
+  width: calc(100% - 22px);
+  border: 0.5px solid #5e5e5e;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  margin: 5px 0 0 0;
+}
+
+select {
+  width: 100%;
+}
+
+.input-reset {
+  border: none;
+  border-radius: 10px;
+  background-color: #322f33;
+  color: white;
+}
+
+.input-reset:hover {
+  background-color: #645f66 ;
+  cursor: pointer;
+}
+
+.input-next {
+  border: none;
+  border-radius: 10px;
+  background-color: #3366FF;
+  color: white;
+}
+
+.input-next:hover {
+  background-color: #254EDB ;
+  cursor: pointer;
+}
+
+.bodyCentro {
+  display: flex;
+  flex-direction: column;
+  height:auto;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.quadrado-central {
+
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: -2px 1px 18px 2px rgba(61, 61, 61, 0.5);
+  -webkit-box-shadow: -2px 1px 18px 2px rgba(59, 59, 59, 0.5);
+  -moz-box-shadow: -2px 1px 18px 2px rgba(61, 61, 61, 0.5);
+
+
+}
+
+.pontos {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.botoes {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.buttonForm {
+  padding: 15px;
+  width: 100%;
+}
+
+.divForm {
+  width: 100%;
+}
+
+/* ---------------------------------------------------- // --------------------------------------------------*/
+
+
+/* Personalização para o elemento <select> */
+select {
+  width:100%;
+
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  margin: 5px 0 0 0;
+  background-color: #ffffff; /* Cor de fundo do select */
+  color: #333; /* Cor do texto do select */
+}
+
+/* Estilo para a seta personalizada */
+select::after {
+  content: "\25BC"; /* Seta para baixo ▼ */
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Adicione estilo para o hover do select */
+select:hover {
+  border-color: #645f66; /* Cor da borda ao passar o mouse */
+
+/* Adicione estilo para o foco do select */
+select:focus {
+  outline: none; /* Remova a borda de foco padrão */
+  box-shadow: 0 0 5px rgba(51, 102, 255, 0.7); /* Adicione uma sombra ao focar */
+}
+}

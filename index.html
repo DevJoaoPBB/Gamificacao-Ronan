@@ -9,95 +9,110 @@
     <link rel="stylesheet" href="estilo.css" />
 </head>
 
-<body>
-    <div id="quadrado-central">
-        <div>
-            <h1>Pontos: <span id="pontucao"></span> </h1>
+<body class="bodyCentro">
+
+    <div class="quadrado-central">
+
+        <div class="pontos">
+            <h1>Pontos: </h1>
+            <h1 id="pontucao">0</h1>
         </div>
 
-        <form onsubmit="event.preventDefault()"><!--IMPEDE DE ENVIAR O FORMULARIO-->
+        <hr>
 
-            <label>Nome Completo:</label>
-            <input type="text" id="nome" onfocusout="pontuar()" /><br><br>
+        <br>
 
-            <label>Idade:</label>
-            <input type="number" onfocusout="pontuar()" /><br><br>
+        <div class="divForm">
+            <form onsubmit="event.preventDefault()"><!--IMPEDE DE ENVIAR O FORMULARIO-->
 
-            <label>Data de Nascimento</label>
-            <input type="date" /><br><br>
+                <label>Nome Completo:</label>
+                <input type="text" id="nome" onfocusout="pontuar()" /><br><br>
 
-            <label for="sexo">Sexo:</label>
-            <select id="sexo">
-                <option> </option>
-                <option>Feminino</option>
-                <option>Masculino</option>
-                <option>Prefiro não responder</option>
+                <label>Idade:</label>
+                <input type="number" onfocusout="pontuar()" /><br><br>
 
-            </select><br><br>
+                <label>Data de Nascimento</label>
+                <input type="date" /><br><br>
 
-            <label>Celular/WhatsApp:</label>
-            <input type="number" onfocusout="pontuar()" /><br><br>
+                <label for="sexo">Sexo:</label>
+                <select id="sexo">
+                    <option> </option>
+                    <option>Feminino</option>
+                    <option>Masculino</option>
+                    <option>Prefiro não responder</option>
 
-            <label>E-mail:</label>
-            <input type="email" onfocusout="pontuar()" /><br><br>
+                </select><br><br>
 
-            <label>CPF:</label>
-            <input type="number" onfocusout="pontuar()" /><br><br>
+                <label>Celular/WhatsApp:</label>
+                <input type="number" onfocusout="pontuar()" /><br><br>
 
-            <label>RG:</label>
-            <input type="number" /><br><br>
+                <label>E-mail:</label>
+                <input type="email" onfocusout="pontuar()" /><br><br>
 
-            <label for="civil">Estado Cívil:</label>
-            <select>
-                <option> </option>
-                <option>Solteiro(o)</option>
-                <option>Casado(a)</option>
-                <option>Divorciado(a)</option>
-                <option>Prefiro não responder</option>
-            </select><br><br>
+                <label>CPF:</label>
+                <input type="number" onfocusout="pontuar()" /><br><br>
 
-            <label>Endereço:</label>
-            <input type="text" onfocusout="pontuar()" /><br><br>
+                <label>RG:</label>
+                <input type="number" /><br><br>
 
-            <label for="estado">Estado:</label>
-            <select id="estado">
-                <option>Selecione o Estado</option>
-                <option value="AC">Acre</option>
-                <option value="AL">Alagoas</option>
-                <option value="AP">Amapá</option>
-                <option value="AM">Amazonas</option>
-                <option value="BA">Bahia</option>
-                <option value="CE">Ceará</option>
-                <option value="DF">Distrito Federal</option>
-                <option value="ES">Espírito Santo</option>
-                <option value="GO">Goiás</option>
-                <option value="MA">Maranhão</option>
-                <option value="MT">Mato Grosso</option>
-                <option value="MS">Mato Grosso do Sul</option>
-                <option value="MG">Minas Gerais</option>
-                <option value="PA">Pará</option>
-                <option value="PB">Paraíba</option>
-                <option value="PR">Paraná</option>
-                <option value="PE">Pernambuco</option>
-                <option value="PI">Piauí</option>
-                <option value="RJ">Rio de Janeiro</option>
-                <option value="RN">Rio Grande do Norte</option>
-                <option value="RS">Rio Grande do Sul</option>
-                <option value="RO">Rondônia</option>
-                <option value="RR">Roraima</option>
-                <option value="SC">Santa Catarina</option>
-                <option value="SP">São Paulo</option>
-                <option value="SE">Sergipe</option>
-                <option value="TO">Tocantins</option>
-            </select>
+                <label for="civil">Estado Cívil:</label>
+                <select>
+                    <option> </option>
+                    <option>Solteiro(o)</option>
+                    <option>Casado(a)</option>
+                    <option>Divorciado(a)</option>
+                    <option>Prefiro não responder</option>
+                </select><br><br>
 
-            <br><br><br>
+                <label>Endereço:</label>
+                <input type="text" onfocusout="pontuar()" /><br><br>
+
+                <label for="estado">Estado:</label>
+                <select id="estado">
+                    <option>Selecione o Estado</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+
+                <br><br><br>
 
 
-            <button onclick="lerFormulario()">SALVAR</button>
-            <!--JA É SUBMITT AUTOMATICAMENTE     - SE QUISER QUE FIQUE UM EM CIMA DO OUTRO E TAL, AQUI TERIA QUE TER FLEX BOX-->
+                <div class="botoes">
+                    <button type="reset" class="buttonForm input-reset">Apagar Campo</button>
+                    <button type="button" class="buttonForm input-next" onclick="pontuar()"
+                        id="btnNext">Próximo</button>
+                    <button type="button" id="btnConcluir" class="buttonForm input-next"
+                        style="display: none;">Concluir</button>
+                </div>
+                <!--JA É SUBMITT AUTOMATICAMENTE     - SE QUISER QUE FIQUE UM EM CIMA DO OUTRO E TAL, AQUI TERIA QUE TER FLEX BOX-->
 
-        </form>
+            </form>
+        </div>
 
         <div id="espaco">
 

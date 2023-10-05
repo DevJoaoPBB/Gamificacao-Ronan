@@ -1,20 +1,27 @@
 //LIGAÇÕES 
 let htmlPontuacao = document.getElementById("pontucao")
+let botaoNext = document.getElementById("btnNext")
+let botaoConcluir = document.getElementById("btnConcluir")
+
 
 //VARIAVEIS GLOBAIS
 
 let pontos = 0
+let nome = "";
+let tela = 1;
 
-function pontuar(){
-    pontos +=10
-    htmlPontuacao.innerHTML = pontos
+function pontuar() {
+  pontos += 10
+  tela++;
+  htmlPontuacao.innerHTML = pontos
+  console.log(tela)
+  nextTela();
 }
 
-$(function() {
-    $("#calendario").datepicker();
-  });
-  
-  // Abrir o calendário quando o botão for clicado
-  $("#btnCalendario").click(function() {
-    $("#calendario").datepicker("show");
-  });
+function nextTela() {
+  if (tela ==  11) {
+    botaoNext.style.display = 'none';
+    botaoConcluir.style.display = 'block';
+    
+  }
+}
