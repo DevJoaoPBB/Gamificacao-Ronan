@@ -28,9 +28,6 @@
                 <label>Nome Completo:</label>
                 <input type="text" id="nome" onfocusout="pontuar()" /><br><br>
 
-                <label>Idade:</label>
-                <input type="number" onfocusout="pontuar()" /><br><br>
-
                 <label>Data de Nascimento</label>
                 <input type="date" /><br><br>
 
@@ -98,9 +95,14 @@
                     <option value="SE">Sergipe</option>
                     <option value="TO">Tocantins</option>
                 </select>
+                <br><br>
+
+                <label for="cidade">Cidade:</label>
+                <select id="cidade">
+                    <option>Selecione a Cidade</option>
+                </select>
 
                 <br><br><br>
-
 
                 <div class="botoes">
                     <button type="reset" class="buttonForm input-reset">Apagar Campo</button>
