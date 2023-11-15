@@ -7,6 +7,8 @@
     <title>Formulario Gamificado</title>
 
     <link rel="stylesheet" href="estilo.css" />
+
+
 </head>
 
 <body class="bodyCentro">
@@ -29,10 +31,10 @@
                 <input type="text" id="nome" onfocusout="pontuar()" /><br><br>
 
                 <label>Data de Nascimento</label>
-                <input type="date" /><br><br>
+                <input type="date" onfocusout="pontuar()"/><br><br>
 
                 <label for="sexo">Sexo:</label>
-                <select id="sexo">
+                <select onfocusout="pontuar()" id="sexo">
                     <option> </option>
                     <option>Feminino</option>
                     <option>Masculino</option>
@@ -50,10 +52,10 @@
                 <input type="number" onfocusout="pontuar()" /><br><br>
 
                 <label>RG:</label>
-                <input type="number" /><br><br>
+                <input type="number" onfocusout="pontuar()" /><br><br>
 
                 <label for="civil">Estado Cívil:</label>
-                <select>
+                <select onfocusout="pontuar()">
                     <option> </option>
                     <option>Solteiro(o)</option>
                     <option>Casado(a)</option>
@@ -65,7 +67,7 @@
                 <input type="text" onfocusout="pontuar()" /><br><br>
 
                 <label for="estado">Estado:</label>
-                <select id="estado">
+                <select id="estado" onfocusout="pontuar()">
                     <option>Selecione o Estado</option>
                     <option value="AC">Acre</option>
                     <option value="AL">Alagoas</option>
@@ -98,18 +100,15 @@
                 <br><br>
 
                 <label for="cidade">Cidade:</label>
-                <select id="cidade">
+                <select id="cidade" onfocusout="pontuar()">
                     <option>Selecione a Cidade</option>
                 </select>
 
                 <br><br><br>
 
                 <div class="botoes">
-                    <button type="reset" class="buttonForm input-reset">Apagar Campo</button>
-                    <button type="button" class="buttonForm input-next" onclick="pontuar()"
-                        id="btnNext">Próximo</button>
-                    <button type="button" id="btnConcluir" class="buttonForm input-next"
-                        style="display: none;">Concluir</button>
+                    <button type="reset" class="buttonForm input-reset">Limpar Campos</button>
+                    <button type="button" id="btnConcluir" class="buttonForm input-next">Concluir</button>
                 </div>
                 <!--JA É SUBMITT AUTOMATICAMENTE     - SE QUISER QUE FIQUE UM EM CIMA DO OUTRO E TAL, AQUI TERIA QUE TER FLEX BOX-->
 

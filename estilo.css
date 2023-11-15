@@ -122,3 +122,52 @@ select:focus {
   box-shadow: 0 0 5px rgba(51, 102, 255, 0.7); /* Adicione uma sombra ao focar */
 }
 }
+/* -----------------------
+
+/* Adicione essas regras de estilo para as linhas animadas */
+.line-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1000;
+  pointer-events: none;
+  background-color: black; /* Adicione um fundo preto */
+}
+
+.line {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: white;
+  transform-origin: top;
+  animation: flyIn 2s linear infinite;
+}
+
+.line:nth-child(odd) {
+  height: 50%;
+}
+
+@keyframes flyIn {
+  to {
+      transform: translateY(100vh) rotateZ(360deg);
+  }
+}
+
+.line-container.animate .line {
+  animation: flyToField 1s linear forwards;
+}
+
+@keyframes flyToField {
+  to {
+      transform: translate(-50%, -50%) rotateZ(720deg);
+      opacity: 0;
+  }
+}
+
+#nome:focus + .line-container {
+  animation: none;
+}
+
